@@ -40,7 +40,7 @@ namespace libreria
             Console.Write("..............");
             Console.WriteLine("");
 
-            Console.WriteLine("Ingrese Apellido:");
+            Console.Write("Ingrese Apellido:");
             p1.Apellido = Console.ReadLine();
 
             Console.Write("Ingrese Nombre: ");
@@ -58,21 +58,22 @@ namespace libreria
         }
 
         public static void mostrarPersona(List<Persona> personas){
+            Console.Clear();
             foreach(var elem in personas){
-                Console.WriteLine("Apellido");
-                Console.WriteLine(elem.Apellido);
-                Console.WriteLine("Nombre");
-                Console.WriteLine(elem.Nombre);
-                Console.WriteLine("dni");
+                Console.WriteLine("-------------");
+                Console.Write("Apellido:");
+                 Console.WriteLine(elem.Apellido); 
+                Console.Write("Nombre:");
+                 Console.WriteLine(elem.Nombre);
+                Console.Write("Dni:");
                  Console.WriteLine(elem.DNI);
-                Console.WriteLine("fecha de nacimiento");
+                Console.WriteLine("Fecha de Nacimiento:");
                  Console.WriteLine(elem.FechaNacimiento);
-                Console.WriteLine(".......");
+                Console.WriteLine("-------------");
                 
             }
             Console.ReadKey();
         }
-
 
         public static string mostrarMenu(){
 
